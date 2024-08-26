@@ -74,11 +74,11 @@ const Form = () => {
   
             <div className="mb-5">
                 <label 
-                  htmlFor="description" 
+                  htmlFor="text" 
                   className="text-gray-700 uppercase font-bold"
                 >Collection description</label>
                 <textarea 
-                  id="description"
+                  id="text"
                   placeholder="Describe the collection"
                   className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
                   value={text}

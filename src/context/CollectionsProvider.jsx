@@ -56,7 +56,7 @@ export const CollectionsProvider = ({children}) => {
 
             try {
                 const { data } = await axiosClient.post('/collections', collection, config )
-                const { __v ,...savedCollection} = data//create a new object without __v
+                const { createdAt, updatedAt, __v, ...savedCollection} = data//create a new object without __v
                 setCollections([savedCollection, ...collections])
             } catch (error) {
                 console.log(error.response.data.msg) 
@@ -69,9 +69,9 @@ export const CollectionsProvider = ({children}) => {
     }
 
     const deleteCollection = async id => {
-        const confirm = confirm('Really want to delete?')
+        const confirmed = confirm('Really want to delete?')
 
-        if(confirm) {
+        if(confirmed) {
             try {
                 const token = localStorage.getItem('token')
                 const config = {

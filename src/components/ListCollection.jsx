@@ -21,7 +21,7 @@ const ListCollection = () => {
                 {collections.map( collection => (
                     <Collection //recorriendo array
                         key={collection._id}
-                        paciente={collection}
+                        collection={collection}
                     />
                 ))}
             </>
